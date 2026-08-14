@@ -1,5 +1,17 @@
 # FrameDiff cloth showcase
 
+## Setup
+
+```sh
+git clone --recurse-submodules https://github.com/micromanager3000/framediff-example-cloth-showcase.git
+cd framediff-example-cloth-showcase
+npm install
+npm run dev
+```
+
+FrameDiff is pinned in `vendor/framediff` until its packages are published to npm. Update the
+pin with `git submodule update --remote vendor/framediff`, then validate and commit the gitlink.
+
 A standalone consumer project for the reusable `createClothComposition()` and
 `createClothSetup()` effects. The showcase takes an independently authorable FrameDiff
 composition, mounts it on the parent clock, and turns its live frame into a three.js physical
@@ -17,7 +29,7 @@ The project follows the repository architecture:
 Run it from the repository root:
 
 ```sh
-npm run dev --workspace @framediff/example-cloth-showcase
+npm run dev
 ```
 
 The 8-second study demonstrates composition-as-texture input, holographic thin-film shading,
