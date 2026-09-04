@@ -124,7 +124,7 @@
   </style>
 </head>
 <body>
-  <main data-fd-composition data-fd-data-mode="source" data-fd-id="MaterialPoster" data-fd-width="944" data-fd-height="560" data-fd-fps="30" data-fd-duration="240" data-fd-kind="scene" data-fd-library="true" data-fd-timeline="hidden" data-fd-transport="always" data-fd-source="src/compositions/MaterialPoster.html" data-fd-module="src/compositions/MaterialPoster.ts" data-fd-export="materialPosterComposition">
+  <main data-fd-composition data-fd-data-mode="json" data-fd-document="src/compositions/MaterialPoster.comp.json" data-fd-id="MaterialPoster" data-fd-width="944" data-fd-height="560" data-fd-fps="30" data-fd-duration="240" data-fd-kind="scene" data-fd-library="true" data-fd-timeline="hidden" data-fd-transport="always" data-fd-source="src/compositions/MaterialPoster.html" data-fd-module="src/compositions/MaterialPoster.ts" data-fd-export="materialPosterComposition">
     <div class="kicker">Composition input / 001</div>
     <div class="index">FD—<span class="frame">000</span></div>
     <div class="title"><span>Make</span><span>HTML</span><span>Move</span></div>
@@ -132,23 +132,6 @@
     <div class="phase">Form</div>
     <div class="copy"><b>Frame-accurate kinetic matter</b>One composition. One clock.<br>Infinite surface behavior.</div>
     <div class="meter"><i></i></div>
-    <script>
-      const phases = [
-        { until: 54, word: "Form" },
-        { until: 112, word: "Force" },
-        { until: 178, word: "Fold" },
-        { until: 240, word: "Flow" },
-      ];
-      onFrame(({ frame, durationInFrames }) => {
-        const wholeFrame = Math.max(0, Math.min(durationInFrames - 1, Math.round(frame)));
-        const progress = wholeFrame / (durationInFrames - 1);
-        const phase = phases.find((item) => wholeFrame < item.until) || phases[phases.length - 1];
-        const root = query(".title").parentElement;
-        root.style.setProperty("--progress", progress.toFixed(5));
-        query(".frame").textContent = String(wholeFrame).padStart(3, "0");
-        query(".phase").textContent = phase.word;
-      });
-    </script>
   </main>
 </body>
 </html>

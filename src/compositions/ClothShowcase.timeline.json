@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "items": [
+    {
+      "id": "kinetic-cloth",
+      "name": "Kinetic cloth",
+      "from": 0,
+      "durationInFrames": 240,
+      "layer": 0,
+      "content": {
+        "type": "nested",
+        "composition": "kinetic-cloth"
+      },
+      "layout": {
+        "rect": [0, 0, 1280, 720],
+        "fit": "cover"
+      }
+    }
+  ]
+}
